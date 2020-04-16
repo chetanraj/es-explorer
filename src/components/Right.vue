@@ -1,10 +1,10 @@
 <template>
   <div class="right">
-    <h3>Usage</h3>
-    <div class="code">
-      <div v-html="source.code"></div>
+    <h3>Example</h3>
+    <div class="code teal">
+      <div v-html="selected.code"></div>
     </div>
-    <blockquote v-if="source.note" class="version">{{source.note}}</blockquote>
+    <blockquote v-if="selected.note" class="version">{{selected.note}}</blockquote>
   </div>
 </template>
 
@@ -17,31 +17,7 @@ export default {
     ...mapGetters(["selected"])
   },
   data() {
-    return {
-      source: {
-        code: "{ ...💛 }"
-      }
-    };
-  },
-  watch: {
-    selected() {
-      let __source = {
-        'let': {
-          note: "let was was introduced in ES6",
-          code: `let a = 10;`
-        },
-        'const': {
-          note: "const was was introduced in ES6",
-          code: `const a = 10;`
-        },
-        'block-scope': {
-            note: 'ES6',
-            code: `function fn () {<br /><span>&nbsp;&nbsp;</span>let x = 0;<br /><span>&nbsp;&nbsp;</span>if (true) {<br /><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>let x = 1; // only inside this 'if'<br /><span>&nbsp;&nbsp;</span>}<br />}`
-        }
-      };
-
-      this.source = __source[this.selected];
-    }
+    return { };
   }
 };
 </script>
@@ -52,6 +28,8 @@ export default {
     display: block;
     border: 1px solid rgba(0,0,0,.1);
     border-radius: 5px;
+    font-size: 18px;
+    font-family: monospace;
     text-align: left;
     white-space: pre;
     word-spacing: normal;
@@ -61,15 +39,23 @@ export default {
     tab-size: 4;
     hyphens: none;
     margin-bottom: 2em;
-    background-color: #f6f6f6;
+    background-color: #1C2326;
     overflow: auto;
+  }
+
+  .teal {
+    color: #7aece2;
+  }
+
+  .yellow {
+    color: #F7DF1E;
   }
 
   blockquote {
     border-left: 0.3rem solid #f7df1e;
     margin-inline-start: 0;
     padding-left: 0.3rem;
-    font-size: 15px;
+    font-size: 16px;
     font-style: italic;
   }
 </style>

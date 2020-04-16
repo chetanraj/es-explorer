@@ -1,13 +1,14 @@
 <template>
   <div class="left">
-    <h1>ES Explorer</h1>
+    <h1>JavaScript ES Explorer</h1>
     <p class="subtitle">Find a quick overview of new JavaScript features in ES2015 and beyond...</p>
     <div class="filter">
       <h4>I need to know about:</h4>
       <select v-model="selected">
-        <option value="" disabled selected>{...💛}</option>
-        <option value="let">let</option>
-        <option value="const">const</option>
+        <option value="" disabled selected>[...💛]</option>
+        <option v-for="option in options" :key="option.desc" :value="option">
+          {{ option.label }}
+        </option>
       </select>
     </div>
   </div>
@@ -25,6 +26,7 @@ export default {
   data () {
     return {
       selected: '',
+      options: this.$store.state.options
     };
   },
   watch: {
