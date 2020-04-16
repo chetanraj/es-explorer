@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="app">
     <GithubCorner />
     <Container msg="ES Explorer" />
   </div>

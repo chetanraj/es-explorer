@@ -1,32 +1,35 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
+  <div class="container">
+    <Left />
+    <Right />
   </div>
 </template>
 
 <script>
+import Left from '@/components/Left.vue';
+import Right from '@/components/Right.vue';
+
 export default {
-  name: 'HelloWorld',
+  name: 'Container',
   props: {
     msg: String,
+  },
+  components: {
+    Left,
+    Right,
   },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+
+  .container {
+    margin: 60px auto;
+    width: 95%;
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: minmax(500px,auto);
+  }
 </style>
