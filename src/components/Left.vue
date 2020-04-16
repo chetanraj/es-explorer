@@ -40,6 +40,8 @@ export default {
 <style scoped lang="scss">
     .filter {
         margin: 3em 0;
+        display: flex;
+        align-items: center;
     }
     
     select {
@@ -47,5 +49,7 @@ export default {
       font-size: 1em;
       height: 2.2em;
       min-width: 8em;
+      margin-left: 1em;
+      margin-top: -5px;
     }
 </style>

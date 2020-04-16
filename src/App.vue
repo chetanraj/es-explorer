@@ -13,11 +13,17 @@ export default {
 </script>
 
 <style lang="scss">
+  :root {
+    --dark: #1C2326;
+    --teal: #7aece2;
+    --yellow: #F7DF1E;
+  }
+
   body {
     font-family: 'Open Sans';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #2c3e50;
+    color: --dark;
     margin: 0;
     padding: 0;
   }
@@ -36,7 +42,7 @@ export default {
   }
 
   pre {
-        background-color: #1C2326;
+        background-color: --dark;
         white-space: pre-line;
         border-radius: 1rem;
         font-size: 18px;

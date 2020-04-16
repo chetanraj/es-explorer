@@ -44,15 +44,15 @@ export default {
   }
 
   .teal {
-    color: #7aece2;
+    color: var(--teal);
   }
 
   .yellow {
-    color: #F7DF1E;
+    color: var(--yellow);
   }
 
   blockquote {
-    border-left: 0.3rem solid #f7df1e;
+    border-left: 0.3rem solid var(--yellow);
     margin-inline-start: 0;
     padding-left: 0.3rem;
     font-size: 16px;
