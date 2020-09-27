@@ -4,7 +4,7 @@
     <div class="code teal">
       <div v-html="selected.code"></div>
     </div>
-    <blockquote v-if="selected.note" class="version">{{selected.note}}</blockquote>
+    <blockquote v-if="selected.desc" class="version">{{selected.desc}}</blockquote>
     <a v-if ="selected.link" v-bind:href="'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/'+ selected.link" class="link" target="blank">see the docs →</a>
   </div>
 </template>

@@ -6,7 +6,7 @@
       <h4>I need to know about:</h4>
       <select v-model="selected">
         <option value="" disabled selected>[...💛]</option>
-        <option v-for="option in options" :key="option.desc" :value="option">
+        <option v-for="option in options" :key="option.key" :value="option">
           {{ option.label }}
         </option>
       </select>

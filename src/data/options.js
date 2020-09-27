@@ -1,36 +1,36 @@
 export const options = [
   {
-    desc: 'let',
+    key: 'let',
     label: 'let',
-    note: 'let declares a block scope local variable, optionally initializing it to a value.',
+    desc: 'let declares a block scope local variable, optionally initializing it to a value.',
     link:'Statements/let',
     code: `let <span class="yellow">a</span> = 10;`
   },
   {
-    desc: 'const',
+    key: 'const',
     label: 'const',
-    note: "Constants are block-scoped, much like variables defined using the let keyword. The value of a constant can't be changed through reassignment, and it can't be redeclared.",
+    desc: "Constants are block-scoped, much like variables defined using the let keyword. The value of a constant can't be changed through reassignment, and it can't be redeclared.",
     link:'Statements/const',
     code: `const <span class="yellow">a</span> = 10;`
   },
   {
-    desc: 'block-scope',
+    key: 'block-scope',
     label: 'Block scope',
-    note: 'A block statement (or compound statement in other languages) is used to group zero or more statements.',
+    desc: 'A block statement (or compound statement in other languages) is used to group zero or more statements.',
     link:'Statements/block',
     code: `function sum () {<br /><span>&nbsp;&nbsp;</span>let <span class="yellow">x</span> = 0; let <span class="yellow">y</span> = 1;<br /><span>&nbsp;&nbsp;</span>if (true) {<br /><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>let <span class="yellow">x</span> = 1; // only inside this 'if'<br /><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>let <span class="yellow">y</span> = 1;<br /><span>&nbsp;&nbsp;</span>}<br />}`
   },
   {
-    desc: 'array-destructuring',
+    key: 'array-destructuring',
     label: 'Array destructuring',
-    note: 'Array destructuring was introduced in ES6',
+    desc: 'Array destructuring was introduced in ES6',
     link:'Operators/Destructuring_assignment#Array_destructuring',
     code: `const [ <span class="yellow">a</span>, <span class="yellow">b</span> ] = [<span class="yellow">'foo'</span>, <span class="yellow">'bar'</span>];`
   },
   {
-    desc: 'object-destructuring',
+    key: 'object-destructuring',
     label: 'Object destructuring',
-    note: 'Object destructuring was introduced in ES6',
+    desc: 'Object destructuring was introduced in ES6',
     link:'Operators/Destructuring_assignment#Object_destructuring',
     code: `const { <span class="yellow">a</span>, <span class="yellow">b</span> } = {<br /><span>&nbsp;&nbsp;</span><span class="yellow">a</span>: 'Array',<br /><span>&nbsp;&nbsp;</span><span class="yellow">b</span>: 'Boolean'<br />}`
   }
