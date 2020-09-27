@@ -5,7 +5,7 @@
       <div v-html="selected.code"></div>
     </div>
     <blockquote v-if="selected.note" class="version">{{selected.note}}</blockquote>
-    <div class="">{{selected.desc}}</div>
+    <a v-if ="selected.link" v-bind:href="'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/'+ selected.link" class="link" target="blank">see the docs →</a>
   </div>
 </template>
 
@@ -50,6 +50,10 @@ export default {
 
   .yellow {
     color: var(--yellow);
+  }
+
+  .link{
+    color: red;
   }
 
   blockquote {

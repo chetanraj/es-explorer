@@ -35,6 +35,7 @@ export default {
   @media screen and (max-width: 850px) {
     .container {
         grid-template-columns: 1fr;
+        grid-gap: 0;
     }
   }
 </style>
