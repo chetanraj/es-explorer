@@ -23,7 +23,9 @@ export default {
     font-family: 'Open Sans';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: --dark;
+    color: var(--dark);
+    font-style: normal;
+    letter-spacing: -.01em;
     margin: 0;
     padding: 0;
   }

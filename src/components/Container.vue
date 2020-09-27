@@ -21,7 +21,6 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 
   .container {
@@ -31,5 +30,11 @@ export default {
     grid-gap: 40px;
     grid-template-columns: 1fr 1fr;
     grid-auto-columns: minmax(500px,auto);
+  }
+
+  @media screen and (max-width: 850px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
   }
 </style>

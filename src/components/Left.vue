@@ -51,5 +51,9 @@ export default {
       min-width: 8em;
       margin-left: 1em;
       margin-top: -5px;
+      border-radius: 4px;
+      border: 1px solid;
+      border-color: var(--dark);
+      padding: 5px;
     }
 </style>
