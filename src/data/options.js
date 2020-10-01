@@ -47,5 +47,12 @@ export const options = [
     desc: 'BigInt can represent integers large than 9007199254740991 (which is the limit for number and represented in Number.MAX_SAFE_INTEGER). BigInts can be created by adding a n at the end of the number or by using the BigInt()-Function.',
     link:'Global_Objects/BigInt',
     code: `const <span class="yellow">largeNumber</span> = 9999999999999999999999999n;<br />const <span class="yellow">notSoLarge</span> = BigInt(555);`
+  },
+  {
+    key: 'optional-chaining',
+    label: 'Optional chaining',
+    desc: 'Optional chaining (?.) works like classic chaining (.) but instead of throwing an error if an element is nullish the optional chaining will return undefined.',
+    link:'Operators/Optional_chaining',
+    code: `const <span class="yellow">car</span> = {<br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="yellow">fuel</span>: 'electricity',<br />&nbsp;&nbsp;&nbsp;&nbsp;<span class="yellow">tires</span>: 4<br />};<br />let <span class="yellow">fuel</span> = car.fuel; // Results in "fuel = 'electricity'"<br />let <span class="yellow">clutch</span> = car.clutch?.type; // Results in "clutch = undefined"<br />let <span class="yellow">seats</span> = car.seats.count; // Throws an error`
   }
 ];
