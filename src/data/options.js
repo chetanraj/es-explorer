@@ -33,5 +33,12 @@ export const options = [
     desc: 'Object destructuring was introduced in ES6',
     link:'Operators/Destructuring_assignment#Object_destructuring',
     code: `const { <span class="yellow">a</span>, <span class="yellow">b</span> } = {<br /><span>&nbsp;&nbsp;</span><span class="yellow">a</span>: 'Array',<br /><span>&nbsp;&nbsp;</span><span class="yellow">b</span>: 'Boolean'<br />}`
+  },
+  {
+    key: 'nullish-coalescing-operator',
+    label: 'Nullish Coalescing Operator',
+    desc: 'Nullish Coalescing Operator was introduced in ES2021. This works a little different from the logical-or-operator (||) as the second argument is only returned if the first argument is null or undefined',
+    link:'Operators/Nullish_coalescing_operator',
+    code: `let <span class="yellow">a</span> = 0 && 111;<br />let <span class="yellow">b</span> = '' && 'backup string';<br />let <span class="yellow">aor</span> = 0 || 111;<br />let <span class="yellow">bor</span> = '' || 'backup string'; <br /><br />// Where the results will be:<br />a=0<br />aor=111<br />b=''<br />bor='backup string'`
   }
 ];
