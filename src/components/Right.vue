@@ -4,8 +4,12 @@
     <div class="code teal">
       <div v-html="selected.code"></div>
     </div>
-    <blockquote v-if="selected.desc" class="version">{{selected.desc}}</blockquote>
+    <blockquote v-if="selected.desc">{{selected.desc}}</blockquote>
     <a v-if ="selected.link" v-bind:href="'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/'+ selected.link" class="link" target="blank">see the docs →</a>
+    <br />
+    <p v-if="selected.version" class="version">
+      Introduced in {{selected.version}}
+    </p>
   </div>
 </template>
 
@@ -24,6 +28,10 @@ export default {
 </script>
 
 <style lang="scss">
+  .version {
+    font-size: 14px;
+  }
+
   .code {
     padding: 1rem;
     display: block;
