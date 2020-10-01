@@ -40,5 +40,12 @@ export const options = [
     desc: 'Nullish Coalescing Operator was introduced in ES2021. This works a little different from the logical-or-operator (||) as the second argument is only returned if the first argument is null or undefined',
     link:'Operators/Nullish_coalescing_operator',
     code: `let <span class="yellow">a</span> = 0 && 111;<br />let <span class="yellow">b</span> = '' && 'backup string';<br />let <span class="yellow">aor</span> = 0 || 111;<br />let <span class="yellow">bor</span> = '' || 'backup string'; <br /><br />// Where the results will be:<br />a=0<br />aor=111<br />b=''<br />bor='backup string'`
+  },
+  {
+    key: 'bigint',
+    label: 'BigInt',
+    desc: 'BigInt can represent integers large than 9007199254740991 (which is the limit for number and represented in Number.MAX_SAFE_INTEGER). BigInts can be created by adding a n at the end of the number or by using the BigInt()-Function.',
+    link:'Global_Objects/BigInt',
+    code: `const <span class="yellow">largeNumber</span> = 9999999999999999999999999n;<br />const <span class="yellow">notSoLarge</span> = BigInt(555);`
   }
 ];
