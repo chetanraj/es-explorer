@@ -33,5 +33,12 @@ export const options = [
     desc: 'Object destructuring was introduced in ES6',
     link:'Operators/Destructuring_assignment#Object_destructuring',
     code: `const { <span class="yellow">a</span>, <span class="yellow">b</span> } = {<br /><span>&nbsp;&nbsp;</span><span class="yellow">a</span>: 'Array',<br /><span>&nbsp;&nbsp;</span><span class="yellow">b</span>: 'Boolean'<br />}`
+  },
+  {
+    key: 'bigint',
+    label: 'BigInt',
+    desc: 'BigInt can represent integers large than 9007199254740991 (which is the limit for number and represented in Number.MAX_SAFE_INTEGER). BigInts can be created by adding a n at the end of the number or by using the BigInt()-Function.',
+    link:'Global_Objects/BigInt',
+    code: `const <span class="yellow">largeNumber</span> = 9999999999999999999999999n;<br />const <span class="yellow">notSoLarge</span> = BigInt(555);`
   }
 ];
